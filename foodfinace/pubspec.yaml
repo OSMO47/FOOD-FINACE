@@ -1,6 +1,8 @@
-name: bill_splitting_app
-description: A bill splitting app for food expenses.
+name: bill_splitter
+description: A bill splitting app for restaurants.
+
 publish_to: "none"
+
 version: 1.0.0+1
 
 environment:
@@ -8,16 +10,14 @@ environment:
 
 dependencies:
   flutter:
-  supabase_flutter: ^1.10.25
-  mysql1: ^0.20.0
-  postgres: ^2.6.3
-  sdk: flutter
+    sdk: flutter
   sqflite: ^2.3.0
-  provider: ^6.0.5
+  path: ^1.8.3
   image_picker: ^1.0.5
+  cupertino_icons: ^1.0.6
   path_provider: ^2.1.1
   share_plus: ^7.2.1
-  cupertino_icons: ^1.0.6
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:

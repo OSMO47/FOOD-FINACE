@@ -1,27 +1,15 @@
 class Person {
-  String name;
-  double amountPaid;
-  List<String> items;
+  final int id; 
+  final String name; 
+  double amount; 
 
-  Person({
-    required this.name,
-    this.amountPaid = 0.0,
-    List<String>? items,
-  }) : items = items ?? [];
+  Person({required this.id, required this.name, this.amount = 0.0});
 
-  Map<String, dynamic> toMap() {
-    return {
-      'name': name,
-      'amountPaid': amountPaid,
-      'items': items,
-    };
-  }
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Person && runtimeType == other.runtimeType && id == other.id;
 
-  factory Person.fromMap(Map<String, dynamic> map) {
-    return Person(
-      name: map['name'],
-      amountPaid: map['amountPaid'],
-      items: List<String>.from(map['items']),
-    );
-  }
+  @override
+  int get hashCode => id.hashCode;
 }
